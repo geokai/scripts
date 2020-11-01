@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# test internat connection by ping-ing google.com 5 times on a 5 second repeat
+
+# hide cursor and trap on EXIT to reset:
+trap 'tput cnorm' EXIT  # reset curor
+tput civis  # hide cursor
+
+while :;
+    do
+        clear
+        ping -c 5 8.8.8.8
+
+        count=1
+        while [ $count -ne 0 ];
+            do
+                printf ".....\r"
+                sleep 1
+                printf ".... \r"
+                sleep 1
+                printf "...  \r"
+                sleep 1
+                printf "..   \r"
+                sleep 1
+                printf ".    \r"
+                sleep 1
+                printf "     \r"
+                sleep 1
+                count=0
+            done
+    done

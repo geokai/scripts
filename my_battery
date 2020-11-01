@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# display the battery capacity for a brief period and
+# repeat after an interval.
+# uses the '-r' flag to set a unique notification ID number.
+# the same ID number is used to close the notification, '-C'.
+
+# configure settings:
+dunstmerge bottom-right
+
+
+dunstify -r 555 "Power" "<span font='18'>$(battery BAT0)</span>"
+sleep 5
+dunstify -C 555
