@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+SCRIPT_DIR="$HOME/.config/scripts/tools"
+SCRIPT_FILE="$SCRIPT_DIR/$1"
+
+if [[ -f $SCRIPT_FILE ]]; then
+    $EDITOR $SCRIPT_FILE
+else
+    echo '#!/bin/bash' > $SCRIPT_FILE
+    i=0
+    while (($i < 3)); do
+        echo '' >> $SCRIPT_FILE
+        i=$((i + 1))
+    done
+    unset i
+    echo '# set: filetype=sh' >> $SCRIPT_FILE
+    chmod 775 $SCRIPT_FILE
+    $EDITOR $SCRIPT_FILE
+fi

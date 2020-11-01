@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+# configure curosr visibility
+trap 'tput cnorm; ' EXIT  # reset cursor on EXIT
+tput civis  # hide cursor
+
+
+while :
+do
+    clear
+    cowsay $(date "+%T")
+    sleep 0.5
+    clear
+    cowsay -s $(date "+%T")
+    sleep 0.5
+done

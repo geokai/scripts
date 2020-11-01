@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+network=$1
+
+
+# find all devices on local network
+sudo nmap -sn $network > /tmp/nmap-list.txt

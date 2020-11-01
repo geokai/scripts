@@ -1,0 +1,5 @@
+#!/bin/bash
+
+figlet -d /usr/share/figlet -f bigascii9.tlf "$1" | lolcat
+
+# set: filetype=sh
