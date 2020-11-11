@@ -1,10 +1,15 @@
 #!/bin/bash
 
-# test internat connection by ping-ing google.com 5 times on a 5 second repeat
+# test internat/network connection by ping-ing google.com (default) 5 times
+# on a 5 second repeat
 
 # hide cursor and trap on EXIT to reset:
-trap 'tput cnorm' EXIT  # reset curor
+trap 'tput cnorm' EXIT  # reset cursor
 tput civis  # hide cursor
+
+
+# TODO: optional user defined ip address parameter with default value.
+#       tests for valid user input
 
 while :;
     do
