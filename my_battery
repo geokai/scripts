@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# display the battery capacity for a brief period and
-# repeat after an interval.
+# display the battery capacity for a specific interval
 # uses the '-r' flag to set a unique notification ID number.
 # the same ID number is used to close the notification, '-C'.
 
